@@ -1,54 +1,67 @@
-<!DOCTYPE html> <!-- DOCTYPE declartion is not considerd as element and declares what TYPE of Docuement this is -->
-<html lang="en"> <!-- "root tag". The first elements in our ELEMENTS. All of our HTML is defined within these tags -->
+<!-- We can create an HTML skeleton by typing ! and hitting enter -->
 
-<!-- The head is typically for metadata-->
+<!DOCTYPE html> <!-- DOCTYPE declaration (not considered an element) declares what TYPE of DOCument this is -->
+
+<html lang="en"> <!-- "root tag". The first element in our HTML file. All of our HTML is defined within these tags -->
+
+<!--The head is typically metadata. <title> defines the name of the tab when you render this page on a browser-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HelloHTMLCSS</title>
 
     <style>
-        /* We could have to find in css like this but we won't. (Head Styling)*/
-
+        /*We could have defined CSS like this, but we won't. (Head Styling)*/
     </style>
-    <!-- This is how we link css to our HTML in external style sheet-->
+
+    <!--This is how we link CSS to our HTML in an EXTERNAL STYLE SHEET (best practice)-->
     <link rel="stylesheet" href="HelloCSS.css">
+
+    <!--Adding Bootstrap to add predefined styles to your app is as easy as adding this link element-->
+    <!--Of course, you do have to actually add bootstrap components to your elements-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
 
-<!-- The body contains all of the actual content you see on the webpage. Our HMTL elements! -->
+<!-- The body contains all of the actual content you see on the webpage. Our HTML elements! -->
 <body>
-    <h1 style="color:red"> Hello HTML! We are offically front end devs </h1> <!-- we style with inline styling, better to seperate in differnt css file-->
-    <h6> I am a tiny header</h6>
-    <!-- Paragraphs are just a generic text element -->
-    <p> I am a paragraph! I am a block elements. Paragaphs are the BLOCK.</p>
-    <p> Block elements take up the entire BLOCK of the page</p>
+    
+    <!-- h1 through h6 are our "header" elements. Basically bold text. h1 is the biggest-->
+    <h1 style="color:red">Hello HTML! We are officially front end devs</h1>
+    <!--We've styled this element with inline styling! Not best practice though... better to separate our CSS into a separate .css file-->
 
-    <!-- Spans are INLINE text elements-->
-    <span> I am a span!</span> <span> We are inline element</span>
+    <h6 style="color:cornflowerblue">I am a tiny header</h6>
 
-    <!-- div is your general DIVISION element-->
-     <!-- we ususlly use these to organize the page and group elements together-->
-    <div id="div1"> 
-        <p> I am a paragraph in the div</p>
-        <span> I am a span in the div</span>
+    <!--Paragraphs are just a generic text element-->
+    <p>I'm a paragraph!</p> <p>Paragraphs are BLOCK elements!</p>
+    <p>Block elements take up an entire BLOCK of the page </p>
+
+    <!--Spans are INLINE text elements-->
+    <span>I am a span!</span> <span>We are INLINE elements!</span>
+
+    <!--div is your general DIVision element.-->
+    <!--We usually use these to organize the page and group elements together-->
+    <div id="div1">
+        <p>I am a paragraph in a div</p>
+        <span>I'm a span in a div</span> 
     </div>
 
-     <!------------------------------------------------ List --------------------------------------------------->
-    <h3 class="header"> Our Favorite Movies</h3>
-     
-    <!-- Order Lists list items in 1, 2, 3 -->
+    <!-----------------------------------------------------------------------(Lists)-->
+
+    <h3 class="headers">Our Favorite Movies</h3>
+
+    <!--Ordered Lists list items in 1, 2, 3 ... format-->
     <ol>
-        <li>Flight Club</li>
+        <li>Fight Club</li>
         <li>Interstellar</li>
         <li>Dark Night</li>
         <li>Snowpiercer</li>
         <li>Step Up</li>
     </ol>
-    <!-- Order Lists list items with bulllet -->
-    <h3 class="header"> Our Favorite Pokemon</h3>
-     
+
+    <h3 class="headers">Our Favorite Pokemon</h3>
+
+    <!--Unordered Lists use bullets instead-->
     <ul>
         <li>Mudkip</li>
         <li>Eevee</li>
@@ -57,18 +70,22 @@
         <li>Gengar</li>
     </ul>
 
-    <!------------------------------------------------ Table  --------------------------------------------------->
-    <!-- Tables are great for display data, through they are a little verbose -->
-     <h3 class="header"> Our pets</h3>
-     <table class="table table-success table-striped">
-        <thead> 
-            <tr>  <!--tr defines a table row-->
+    <!--------------------------------------------(Tables)-->
+
+    <!--Tables are great for displaying data, though they're a little verbose-->
+
+    <h3 class="headers">Our Pets</h3>
+
+    <table class="table table-primary table-striped w-50">
+        <thead class="table-dark"> <!--thead defines the table's header row-->
+            <tr> <!--tr defines a table row-->
                 <th>Associate Name</th>
                 <th>Pet Species</th>
                 <th>Pet Name</th>
             </tr>
-        </thead>
-        <tbody> <!-- tbody defines the body of the table (the data)-->
+        </thead> 
+
+        <tbody> <!--tbody defines the body of the table (the data)-->
             <tr>
                 <td>Andrew</td>
                 <td>Dog</td>
@@ -77,87 +94,105 @@
             <tr>
                 <td>Daniel</td>
                 <td>Dog</td>
-                <td>Pow</td>
-            </tr>
-            <tr>
-                <td>Olive</td>
-                <td>Cat</td>
-                <td>Mary</td>
+                <td>Moose</td>
             </tr>
             <tr>
                 <td>Jacob</td>
                 <td>Dog</td>
-                <td>Skippy</td>
+                <td>Charlie</td>
             </tr>
-
             <tr>
-                <td>Cindy</td>
+                <td>Aaron</td>
+                <td>Cat(s)</td>
+                <td>Ollie & Ari</td>
+            </tr>
+            <tr>
+                <td>Gavin</td>
+                <td>Cat</td>
+                <td>Stormy</td>
+            </tr>
+            <tr>
+                <td>Anamaria</td>
                 <td>Dog</td>
-                <td>Camer</td>
+                <td>Skippy</td>
             </tr>
         </tbody>
     </table>
 
-    <!----------------------------------------------------- Input Element -------------------------------------------------------------------->
-    <br> <br> <br>
-    <p> Enter your username: </p>
-    <input type ="text" placeholder="HTMLguy123">
+    <!------------------------------------------(Input Elements)-->
 
-    <p> Enter your password: </p>
+    <!--These are line breaks - they create an empty line on the document-->
+    <br><br><br>
+
+    <p>Enter your username: </p>
+    <input type="text" placeholder="HTMLguy123">
+
+    <p>Enter your password: </p>
     <input type="password" placeholder="password123">
 
-    <p> Enter your age: </p>
+    <p>Enter your age: </p>
     <input type="number">
 
-     <!----------------------------------------------------- Radio Button let you choose only one option -------------------------------------------------------------------->
+    <!--Radio Buttons let you choose ONLY ONE option-->
 
-    <h4>Choose an option: </h4>
-    
-    <div> 
-        <div> 
+    <h4>Choose an Option: </h4>
+
+    <div>
+
+        <div>
             <input type="radio" name="radioGroup" id="radio1">
             <label for="radio1">Yes</label>
         </div>
+
         <div>
             <input type="radio" name="radioGroup" id="radio2">
-            <label for="">No</label>
+            <label for="radio2">No</label>
         </div>
+
     </div>
 
-     <!----------------------------------------------------- Check box allows us to select multiple options ------------------------------------------------------------------->
+    <!--Checkboxes allow us to select multiple options-->
 
-     <h4>How are you doing?</h4>
-    
-    <div> 
-        <div class="checkContainer"> 
+    <h4>How are you doing?</h4>
+
+    <div id="checkboxContainer">
+
+        <div>
             <input type="checkbox" name="checkGroup" id="check1">
             <label for="check1">Happy</label>
         </div>
-        <div> 
+
+        <div>
             <input type="checkbox" name="checkGroup" id="check2">
             <label for="check2">Sad</label>
         </div>
-        <div> 
+
+        <div>
             <input type="checkbox" name="checkGroup" id="check3">
             <label for="check3">Indifferent</label>
         </div>
+
     </div>
-    
-    <!----------------------------------------------------- Select Elements to create drop down ------------------------------------------------------------------->
-    <br> <br>
-    <select name="Pizza Toppings" id = "ToppingDropDowns"> 
-        <option value="" disable selected>Choose a Topping:</option> 
-        <option value="Pepperoni"> Pepperoni</option>
-        <option value="Sausage"> Sausage</option>
-        <option value="Green Pepper"> Green Pepper</option>
-        <option value="Pineapple"> Pineapple</option>
-        <option value="Spam"> Spam</option>
-        <option value="Anchovy"> Anchovy </option>
+
+    <br><br>
+    <!--We can use the "select" element to create dropdowns-->
+
+    <select name="Pizza Toppings" id="toppingsDropdown">
+        <option value="" disabled selected>Choose a Topping:</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Sausage">Sausage</option>
+        <option value="Green Pepper">Green Pepper</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Spam">Spam</option>
+        <option value="Anchovy">Anchovy</option>
     </select>
-    
-    <!----------------------------------------------------- Button ------------------------------------------------------------------->
-    <br> <br>
-    <button> Hello I do not do much but you can click me!</button>
-    </body>
+
+    <br><br>
+
+    <button>Hello I don't do much but you can click me</button>
+
+    <p>I'm just putting this here so I can push and we can show git pull</p>
+
+</body>
 
 </html>

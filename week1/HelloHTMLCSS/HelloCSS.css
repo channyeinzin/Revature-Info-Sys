@@ -1,35 +1,37 @@
-/* This is external stylesheet and this is the best practice. */
+/*This is an external stylesheet - this is the best practice when styling HTML with CSS*/
 
-/* Every paragraph tag will get this styling (element selector) */
-
+/*Every paragraph tag will get this styling (element selector)*/
 p {
     text-align: center;
-    color: blue;
+    color:blue;
 }
 
-/* every element with id = div1 will get this styling id use '#' */
-#div1{
+/*every element with id = div1 will get this styling*/
+#div1 {
     border: solid 5px green; /*border is a visible border*/
     border-radius: 25px;
-    padding: 10px; /*padding applies space between the border and content*/
+    padding: 50px; /*padding applies space between the border and the content*/
 }
 
-/*every element with class = header will get this styling*/
-.header{
-    margin: 100px; /* margin makes a space between an element and its neighnors*/
-    background-color: darkcyan;
-    font-family: cursive;
+/*every element with class = headers will get this styling*/
+.headers {
+    margin: 100px; /*margin makes space between an element and its neighbors*/
+    background-color:darkcyan;
+    font-family:cursive;
     font-weight: bolder;
     font-style: italic;
     font-size: xx-large;
-    text-align: center;
+    text-align: right;
 }
+
+/*Every element will get this styling (universal selector)*/
 * {
-    background-color: beige;
+    background-color: lightsalmon;
 }
 
-#checkContainer{
-    display: flex;
-    flex-direction: column;
-
+#checkboxContainer {
+    display:flex; /*This allows us to use flexbox stylings*/
+    flex-direction:row-reverse;
+    justify-content: center;
+    gap: 75px;
 }
